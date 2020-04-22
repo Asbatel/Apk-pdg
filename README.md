@@ -1,4 +1,4 @@
-# Welcome to apk-pdg
+# Welcome to Apk-pdg
 
 Androguard-based framework to create a Program Dependence Graph of an Android application (apk) and export it into a graph format.
 
