@@ -19,22 +19,6 @@ def get_analysis_objects(apk_file):
     return dex, dvm_analysis
 
 
-def get_pdg(dex, dvm_analysis, pdg_graph):
-    for method in dex.get_methods():
-        if method.is_external():
-            continue
-        else:
-            methodAnalysis = dex.get_method(method.get_method())
-            for basicBlock in methodAnalysis.get_basic_blocks().gets():
-                children = []
-                description = get_bb_description(basicBlock)
-                children = get_children(basicBlock, dex, dvm_analysis)
-                pdg_graph.add_node(label)
-                pdg_graph.add_edges_from([(label, child) for child in children])
-
-    return pdg_graph
-
-
 def construct(apk_file):
     dex, dvm_analysis = get_analysis_objects(apk_file)
     pdg_i = PDG(dex, dvm_analysis)
