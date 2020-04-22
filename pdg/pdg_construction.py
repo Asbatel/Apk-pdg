@@ -1,7 +1,5 @@
 import sys
 import os
-import time
-import json
 from androguard.misc import AnalyzeAPK
 from androguard.core.bytecodes.dvm import DalvikVMFormat
 import networkx as nx

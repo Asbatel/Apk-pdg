@@ -2,7 +2,7 @@ import sys
 import os
 from androguard.misc import AnalyzeAPK
 from androguard.core.bytecodes.dvm import DalvikVMFormat
-from get_pdg import PDG
+from pdg_construction import PDG
 import networkx as nx
 
 
@@ -46,6 +46,6 @@ try:
     pdg_graph = construct(apk_file)
     nx.write_gpickle(pdg_graph, "pdg_" + os.path.basename(apk_file))
 except:
-     print("error generating the PGD")
+     print("Error generating the PGD")
 finally:
     print("Successfully saved under "+ os.path.dirname(os.path.realpath(apk_file)))
