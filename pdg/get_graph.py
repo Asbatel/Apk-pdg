@@ -30,6 +30,6 @@ try:
     pdg_graph = construct(apk_file)
     nx.write_gpickle(pdg_graph, "pdg_" + os.path.basename(apk_file))
 except:
-     print("Error generating the PGD")
+     print("Error generating the PDG")
 finally:
     print("Successfully saved under "+ os.path.dirname(os.path.realpath(apk_file)))
